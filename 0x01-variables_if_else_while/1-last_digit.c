@@ -13,8 +13,7 @@
 
 int main(void)
 
-{
-	
+{	
 	int n, lastd;
 	
 	srand(time(0));
@@ -23,7 +22,8 @@ int main(void)
 	
 	if (lastd > 5)
 	{
-	printf("Last digit of %d is %d and is greater than 5\n", n, lastd);
+	printf("Last digit of %d is %d and is greater than 5\n", n, last
+d);
 	}
 	else if (lastd == 0)
 	{
@@ -35,4 +35,5 @@ int main(void)
 n, lastd);
         }
         return (0);
+
 }
