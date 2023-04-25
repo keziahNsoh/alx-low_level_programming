@@ -4,7 +4,6 @@
  * Description: print_alphabet_x10 - Print alphabet x10 times
  * Return: void
  */
-
 void print_alphabet_x10(void)
 {
 	char c;
