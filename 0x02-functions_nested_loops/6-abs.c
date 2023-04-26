@@ -2,14 +2,13 @@
 
 /**
  * _abs - computes the absolute value of an integrer
- * @n: the int to check
+ * @c: the int to check
  * Return: the absolute value of int
  */
 
 int _abs(int c)
 
 {
-	
 	if (c < 0)
 	{
 	int abs_val;
