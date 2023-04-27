@@ -16,13 +16,14 @@ int main(void)
 	{
 		sum = fib1 + fib2;
 		printf("%lu, ", sum);
+			half2 %= 10000000000;
 		fib1 = fib2;
 		fib2 = sum;
 
-		if(count == 00)
+		if(count == 99)
 			printf("\n");
 		else
-			print(", ");
+			printf(", ");
 	}
 	return (0);
 }
