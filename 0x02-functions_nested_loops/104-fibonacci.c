@@ -14,10 +14,10 @@ int main(void)
 
 	for (count = 2; count < 99; count++)
 	{
-		sum = fib1 + fib2;
+		sum = fib2 + fib3;
 		printf("%lu", sum);
-		fib1 = fib2;
-		fib2 = sum;
+		fib2 = fib3;
+		fib3 = sum;
 
 		if(count == 98)
 			printf("\n");
