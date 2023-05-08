@@ -13,5 +13,6 @@ void print_diagsums(int *a, int size);
 void set_string(char **s, char *to);
 char buffer[98] = {0};
 char buffer2[98] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
+char buffer[98] = {0x00};
 
 #endif
