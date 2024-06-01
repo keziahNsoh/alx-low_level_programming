@@ -2,19 +2,10 @@ CC = gcc
 SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
+RM = /bin/rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 # Rules
-all: $(NAME)
-
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
-
-clean:
-	rm -f $(OBJ) $(NAME)
-
-.PHONY: all clean
-
 all: $(NAME)
 	@echo "Building $(NAME)"
 
@@ -25,3 +16,15 @@ $(NAME): $(OBJ)
 %.o: %.c
 	@echo "Compiling: $<"
 	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	$(RM) *~ $(NAME)
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean oclean
+
+re: fclean all
+
+.PHONY: all clean oclean fclean re
