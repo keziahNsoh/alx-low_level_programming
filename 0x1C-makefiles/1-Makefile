@@ -1,0 +1,10 @@
+CC = gcc
+VPATH = src
+SRC = main.c school.c
+EXECUTABLE = school
+
+$(EXECUTABLE): $(SRC)
+	$(CC) -o $@ $^
+
+.PHONY: all
+all: $(EXECUTABLE)
