@@ -3,7 +3,8 @@ SRC = $(wildcard *.c)
 OBJ = $(SRC:.c=.o)
 NAME = school
 
-.PHONY: all
+.PHONY: all clean
+
 all: $(NAME)
 
 $(NAME): $(OBJ)
@@ -14,4 +15,3 @@ $(NAME): $(OBJ)
 
 clean:
 	rm -f $(OBJ) $(NAME)
-
