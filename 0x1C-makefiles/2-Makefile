@@ -4,24 +4,21 @@ OBJ = $(SRC:.c=.o)
 NAME = school
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-# Rules
+# Rule to build all targets
 all: $(NAME)
+	@echo "Building $(NAME)"
 
+# Rule to compile source files into object files
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
+# Rule to clean up object files and executable
 clean:
 	rm -f $(OBJ) $(NAME)
 
 .PHONY: all clean
 
-all: $(NAME)
-	@echo "Building $(NAME)"
-
+# Rule to link object files into executable
 $(NAME): $(OBJ)
 	@echo "Linking objects into executable: $@"
 	$(CC) $(CFLAGS) $^ -o $@
-
-%.o: %.c
-	@echo "Compiling: $<"
-	$(CC) $(CFLAGS) -c $< -o $@
