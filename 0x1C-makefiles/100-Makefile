@@ -10,19 +10,20 @@ RM := /bin/rm -f
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) -o $@ $^
+    $(CC) $(CFLAGS) -o $@ $^
 
 clean:
-	$(RM) *~ $(NAME)
+    $(RM) $(NAME) $(OBJ) *~
 
 oclean:
-	$(RM) $(OBJ)
+    $(RM) $(OBJ)
 
-fclean: clean oclean
-	$(RM) $(NAME)
+fclean: clean
 
 re: fclean all
 
 %.o: %.c m.h
-	$(CC) $(CFLAGS) -c $< -o $@
+    $(CC) $(CFLAGS) -c $< -o $@
+
+# Ensure the Makefile ends with a new line
 
