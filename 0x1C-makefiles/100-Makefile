@@ -13,12 +13,12 @@ $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^
 
 clean:
-	$(RM) *~ $(NAME) $(OBJ)
+	$(RM) *~ $(NAME)
 
 oclean:
 	$(RM) $(OBJ)
 
-fclean: clean
+fclean: clean oclean
 	$(RM) $(NAME)
 
 re: fclean all
