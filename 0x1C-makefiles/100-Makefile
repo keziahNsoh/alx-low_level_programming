@@ -23,6 +23,6 @@ fclean: clean oclean
 
 re: fclean all
 
-$(OBJ): $(SRC) m.h
+%.o: %.c m.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
