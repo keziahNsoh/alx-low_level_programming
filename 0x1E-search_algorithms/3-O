@@ -1,0 +1,3 @@
+The space complexity is O(1).
+Iterative linear search operates using a fixed amount of extra space,
+mostly just a few variables for indexing and comparisons,regardless of the input array size n. 
