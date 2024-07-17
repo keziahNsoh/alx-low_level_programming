@@ -1,3 +1,1 @@
-The time complexity in the worst case,may need to iterate through all
-the elements of a linear search until it finds the target or reaches the end
-in this case it is O(n).
+O(n)

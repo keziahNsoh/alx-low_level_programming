@@ -1,3 +1,1 @@
-The function allocate_map is responsible for allocating memory for a 2D array (matrix) of size n x m.
-This involves allocating memory for n pointers (rows) and n x m integers (columns).
-As a result, the space complexity is O(n x m).
+O(n x m)

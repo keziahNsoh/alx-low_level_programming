@@ -1,3 +1,1 @@
-Binary search is typically implemented repeatedly,
-requiring additional memory on the call stack proportional to the recursion depth.
-In the worst case,this depth is O(log n),hence the space complexity is O(log n)
+O(log n)
