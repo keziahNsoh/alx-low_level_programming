@@ -36,7 +36,6 @@ typedef struct listint_s
     struct listint_s *next;
 } listint_t;
 
-/* Function prototypes */
 
 /* Linear search */
 int linear_search(int *array, size_t size, int value);
@@ -61,6 +60,9 @@ void quick_sort(int *array, size_t size);
 
 /* Skiplist */
 skiplist_t *linear_skip(skiplist_t *list, int value);
+
+/* Function prototypes */
+int advanced_binary(int *array, size_t size, int value);
 
 #endif /* SEARCH_ALGOS_H */
 
