@@ -1,52 +1,39 @@
-#include <stdio.h>
 #include "search_algos.h"
 
 /**
- * binary_search - Searches for a value in a sorted array using binary search algorithm
- * @array: Pointer to the first element of the array to search in
- * @size: Number of elements in @array
- * @value: Value to search for
- *
- * Return: Index where @value is located, or -1 if not found or @array is NULL
+ * binary_search - finding the value faster using good technique
+ * @array: the array
+ * @size: the size
+ * @value: the value required
+ * Return: the index on sucess
  */
 int binary_search(int *array, size_t size, int value)
 {
-    size_t left = 0, right = size - 1, mid;
+	size_t first = 0, last = size - 1, i = 0, mid = 0;
 
-    if (array == NULL)
-        return -1;
+	do {
+		printf("Searching in array: ");
+		for (i = first; i <= last; i++)
+		{
+			if (i == last)
+			{
+				printf("%d\n", array[i]);
+				continue;
+			}
+			printf("%d, ", array[i]);
+		}
+		mid = (last + first) / 2;
+		if (array[mid] < value)
+		{
+			first = mid + 1;
+		}
+		else if (array[mid] > value)
+		{
+			last = mid - 1;
+		}
+		else
+			return (mid);
+	} while (first <= last);
 
-    while (left <= right)
-    {
-        mid = (left + right) / 2;
-        printf("Searching in array: ");
-        print_array(array, left, right);
-        if (array[mid] < value)
-            left = mid + 1;
-        else if (array[mid] > value)
-            right = mid - 1;
-        else
-            return mid;
-    }
-
-    return -1;
-}
-
-/**
- * print_array - Prints elements of an array between specified indices
- * @array: Pointer to the first element of the array
- * @start: Starting index
- * @end: Ending index
- */
-void print_array(int *array, size_t start, size_t end)
-{
-    size_t i;
-
-    for (i = start; i <= end; i++)
-    {
-        if (i > start)
-            printf(", ");
-        printf("%d", array[i]);
-    }
-    printf("\n");
+	return (-1);
 }
