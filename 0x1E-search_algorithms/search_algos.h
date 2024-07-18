@@ -52,17 +52,20 @@ int interpolation_search(int *array, size_t size, int value);
 /* Exponential search */
 int exponential_search(int *array, size_t size, int value);
 
-/* Sorting algorithms */
-void bubble_sort(int *array, size_t size);
-void insertion_sort(int *array, size_t size);
-void selection_sort(int *array, size_t size);
-void quick_sort(int *array, size_t size);
-
 /* Skiplist */
 skiplist_t *linear_skip(skiplist_t *list, int value);
 
 /* Function prototypes */
 int advanced_binary(int *array, size_t size, int value);
+
+/* Jump list */
+listint_t *jump_list(listint_t *list, size_t size, int value);
+
+/* Sorting algorithms */
+void bubble_sort(int *array, size_t size);
+void insertion_sort(int *array, size_t size);
+void selection_sort(int *array, size_t size);
+void quick_sort(int *array, size_t size);
 
 #endif /* SEARCH_ALGOS_H */
 
